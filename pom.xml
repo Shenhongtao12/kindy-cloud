@@ -12,7 +12,7 @@
     <description>微服务系统-Demo</description>
 
     <properties>
-        <ruoyi.version>3.6.3</ruoyi.version>
+        <kindy.version>0.0.1</kindy.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
@@ -126,6 +126,25 @@
                 <version>${transmittable-thread-local.version}</version>
             </dependency>
 
+            <!--核心模块-->
+            <dependency>
+                <groupId>com.kindy</groupId>
+                <artifactId>kindy-common-core</artifactId>
+                <version>${kindy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kindy</groupId>
+                <artifactId>kindy-api-system</artifactId>
+                <version>${kindy.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kindy</groupId>
+                <artifactId>kindy-common-log</artifactId>
+                <version>${kindy.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -133,9 +152,7 @@
         <module>kindy-common</module>
         <module>kindy-api</module>
         <module>kindy-gateway</module>
-        <module>kindy-api/kindy-api-system</module>
         <module>kindy-modules</module>
-        <module>kindy-modules/kindy-system</module>
     </modules>
     <packaging>pom</packaging>
 

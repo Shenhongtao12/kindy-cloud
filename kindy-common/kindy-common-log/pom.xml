@@ -5,17 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.kindy</groupId>
-        <artifactId>kindy-api</artifactId>
+        <artifactId>kindy-common</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>kindy-api-system</artifactId>
+    <artifactId>kindy-common-log</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>com.kindy</groupId>
-            <artifactId>kindy-common-core</artifactId>
+            <artifactId>kindy-api-system</artifactId>
         </dependency>
     </dependencies>
+
+
 
 </project>

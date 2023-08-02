@@ -1,0 +1,2 @@
+com.kindy.common.log.service.AsyncLogService
+com.kindy.common.log.aspect.LogAspect

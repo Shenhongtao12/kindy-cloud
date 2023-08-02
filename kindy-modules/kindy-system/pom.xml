@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.kindy</groupId>
-        <artifactId>kindy</artifactId>
+        <artifactId>kindy-modules</artifactId>
         <version>0.0.1</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>kindy-system</artifactId>
@@ -54,6 +53,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kindy</groupId>
+            <artifactId>kindy-common-log</artifactId>
         </dependency>
     </dependencies>
 

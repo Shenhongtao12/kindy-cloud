@@ -1,5 +1,6 @@
 package com.kindy.system.controller;
 
+import com.kindy.common.log.annotation.Log;
 import com.kindy.system.config.SystemConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +15,7 @@ public class UserController {
     @Autowired
     private SystemConfig systemConfig;
 
+    @Log(title = "user测试")
     @GetMapping
     public String get() throws InterruptedException {
         System.out.println(systemConfig.getUsername());
