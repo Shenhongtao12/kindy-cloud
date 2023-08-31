@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.kindy</groupId>
-        <artifactId>kindy-common</artifactId>
+        <artifactId>kindy</artifactId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>kindy-common-log</artifactId>
+    <artifactId>kindy-test</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,26 +17,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+
     <dependencies>
-
         <dependency>
-            <groupId>com.kindy</groupId>
-            <artifactId>kindy-api-system</artifactId>
+            <groupId>cn.zhxu</groupId>
+            <artifactId>okhttps-fastjson2</artifactId>
         </dependency>
 
-        <!-- Spring Web -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
-
         <dependency>
-            <groupId>com.kindy</groupId>
-            <artifactId>kindy-api-system</artifactId>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
         </dependency>
     </dependencies>
-
-
 
 </project>

@@ -8,7 +8,7 @@
     <artifactId>kindy</artifactId>
     <version>0.0.1</version>
 
-    <name>cloud-test</name>
+    <name>kindy-cloud</name>
     <description>微服务系统-Demo</description>
 
     <properties>
@@ -126,6 +126,25 @@
                 <version>${transmittable-thread-local.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>cn.zhxu</groupId>
+                <artifactId>okhttps-fastjson2</artifactId>
+                <version>4.0.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
             <!--核心模块-->
             <dependency>
                 <groupId>com.kindy</groupId>
@@ -153,6 +172,7 @@
         <module>kindy-api</module>
         <module>kindy-gateway</module>
         <module>kindy-modules</module>
+        <module>kindy-test</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -14,9 +14,9 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
-        namespace: 591e813f-5187-4356-97e6-79fc7cf4aa48
+        namespace: 1cfe3050-1993-426f-8956-6a7d314ed9a8
       config:
-        namespace: 591e813f-5187-4356-97e6-79fc7cf4aa48
+        namespace: 1cfe3050-1993-426f-8956-6a7d314ed9a8
         # 配置中心地址
         server-addr: 127.0.0.1:8848
         # 配置文件格式
