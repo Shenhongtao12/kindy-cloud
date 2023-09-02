@@ -30,11 +30,6 @@
             <artifactId>spring-webmvc</artifactId>
         </dependency>
 
-
-        <dependency>
-            <groupId>com.kindy</groupId>
-            <artifactId>kindy-api-system</artifactId>
-        </dependency>
     </dependencies>
 
 

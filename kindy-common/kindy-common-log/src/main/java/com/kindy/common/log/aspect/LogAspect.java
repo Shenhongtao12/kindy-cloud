@@ -20,7 +20,7 @@ public class LogAspect {
      */
     @Before(value = "@annotation(controllerLog)")
     public void boBefore(JoinPoint joinPoint, Log controllerLog) {
-        System.out.println("-------=========-------------");
+        System.out.println("-------=====before====-------------");
     }
 
     /**
@@ -30,6 +30,7 @@ public class LogAspect {
      */
     @AfterReturning(pointcut = "@annotation(controllerLog)", returning = "jsonResult")
     public void doAfterReturning(JoinPoint joinPoint, Log controllerLog, Object jsonResult) {
+        System.out.println("========After==========");
         handleLog(joinPoint, controllerLog, null, jsonResult);
     }
 
@@ -42,8 +43,7 @@ public class LogAspect {
     protected void handleLog(final JoinPoint joinPoint, Log controllerLog, final Exception e, Object jsonResult) {
         String className = joinPoint.getTarget().getClass().getName();
         String methodName = joinPoint.getSignature().getName();
-        System.out.println("===========");
-        System.out.println(className + "." + methodName);
+        System.out.println("class method: " + className + "." + methodName);
 
         SysOperLog operLog = new SysOperLog();
         operLog.setTitle(className + methodName);

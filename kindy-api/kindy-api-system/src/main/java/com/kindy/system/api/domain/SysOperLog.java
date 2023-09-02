@@ -35,4 +35,13 @@ public class SysOperLog {
     public void setBusinessType(Integer businessType) {
         this.businessType = businessType;
     }
+
+    @Override
+    public String toString() {
+        return "SysOperLog{" +
+                "operId=" + operId +
+                ", title='" + title + '\'' +
+                ", businessType=" + businessType +
+                '}';
+    }
 }

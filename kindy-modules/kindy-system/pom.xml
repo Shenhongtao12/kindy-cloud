@@ -9,7 +9,7 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>kindy-system</artifactId>
+    <artifactId>kindy-modules-system</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

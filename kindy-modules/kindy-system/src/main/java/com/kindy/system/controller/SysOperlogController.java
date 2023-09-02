@@ -1,6 +1,7 @@
 package com.kindy.system.controller;
 
 import com.kindy.common.log.annotation.Log;
+import com.kindy.system.api.domain.SysOperLog;
 import org.ietf.jgss.Oid;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,9 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/operlog")
 public class SysOperlogController {
 
-    @Log(title = "log")
     @PostMapping
-    public void addLog(Object operLog) {
+    public void addLog(SysOperLog operLog) {
         System.out.println("记录log： " + operLog.toString());
     }
 

@@ -5,7 +5,6 @@ import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.kindy.common.log.annotation.Log;
 import com.kindy.system.config.SystemConfig;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,13 +21,13 @@ public class UserController {
     @SentinelResource(value = "hello", blockHandler = "handleBlock", fallback = "fallback")
     public String get() throws InterruptedException {
 //        throw new RuntimeException("error");
-        Thread.sleep(100);
+//        Thread.sleep(100);
         System.out.println(systemConfig.getUsername());
         return "user " +  System.currentTimeMillis() + " : " + systemConfig.getUsername();
     }
 
     public String fallback() {
-        return "================";
+        return "========fallback========";
     }
 
     public String handleBlock(BlockException ex) {

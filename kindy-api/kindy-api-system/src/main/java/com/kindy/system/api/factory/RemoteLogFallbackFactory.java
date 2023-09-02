@@ -9,20 +9,16 @@ import org.springframework.cloud.openfeign.FallbackFactory;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RemoteLogFallbackFactory implements FallbackFactory<RemoteLogService>
-{
+public class RemoteLogFallbackFactory implements FallbackFactory<RemoteLogService> {
     private static final Logger log = LoggerFactory.getLogger(RemoteLogFallbackFactory.class);
 
     @Override
-    public RemoteLogService create(Throwable throwable)
-    {
+    public RemoteLogService create(Throwable throwable) {
         log.error("日志服务调用失败:{}", throwable.getMessage());
-        return new RemoteLogService()
-        {
+        return new RemoteLogService() {
             @Override
-            public R<Boolean> saveLog(SysOperLog sysOperLog, String source)
-            {
-                return null;
+            public R<Boolean> saveLog(SysOperLog sysOperLog, String source) {
+                return R.fail("保存失败");
             }
         };
 
